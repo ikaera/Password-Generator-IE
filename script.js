@@ -41,7 +41,7 @@ function writePassword() {
   // Start function to generate password
   function generatePassword() {
     // Asks for user input
-    enter = parseInt(prompt("How many characters would you like in your password? (or What would you like the length of your Generated Password to be?)?               {Please, Choose the length of your password between 8 and 128 characters!}"));
+    enter = parseInt(prompt("How many characters would you like in your password? (or What would you like the length of your Generated Password to be?)                {Please, choose the length of your password between 8 and 128 characters!}"));
     // First if statement for user validation 
     if (!enter) {
       alert("This needs a value");

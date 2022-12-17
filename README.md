@@ -60,7 +60,7 @@ What are the steps required to install your project? Provide a step-by-step desc
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax: -->
 
 ### Screenshots:
-    ```md
+    
 ![alt text](./Assets/images/Screenshot1.png)
 ![](./Assets/images/Screenshot2.png)
 ![](./Assets/images/Screenshot3.png)
@@ -68,7 +68,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 ![](./Assets/images/Screenshot5.png)
 ![](./Assets/images/Screenshot6-result.png)
 
-    ```
+
 ### link to deployed application:
 
 https://ikaera.github.io/Password-Generator-IE/

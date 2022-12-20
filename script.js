@@ -99,9 +99,9 @@ function writePassword() {
   // or other option useing textcontent
   // passwordText.textContent = password
   // console.log(password);
-  if (!passwordText.value === 0){
-    passwordText.value = '';
-  }
+
+  //the password is displayed in an alert.
+  // alert(`Here is the generated Password:  ${ password}`);
 }
 // Add event listener to generate button and 
 generateBtn.addEventListener("click", writePassword);
@@ -161,4 +161,7 @@ generateBtn.addEventListener("click", writePassword);
     // else if (confirmUppercase) {
     //   choices = choices.concat(alpha2);
     // };
+     // if (!passwordText.value === 0){
+  //   passwordText.value = '';
+  // }
 

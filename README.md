@@ -29,12 +29,8 @@ A step-by-step description of how to get the development environment running:
 
 ### Screenshots:
     
-![alt text](./Assets/images/Screenshot1.png)
-![](./Assets/images/Screenshot2.png)
-![](./Assets/images/Screenshot3.png)
-![](./Assets/images/Screenshot4.png)
-![](./Assets/images/Screenshot5.png)
-![](./Assets/images/Screenshot6-result.png)
+![alt text](./Assets/images/ScreenshotNew.png)
+![](./Assets/images/ScreenshotNew2.png)
 
 ## Website 
 

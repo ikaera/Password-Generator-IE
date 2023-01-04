@@ -14,32 +14,32 @@ function writePassword() {
     let confirmCharacter;
     let confirmUppercase;
     let confirmLowercase;
+    let choices = [];
     // Start Password variable values: 
     // Special characters 
     let characters = ["!", "#", "$", "%", "&", "'", "(",")", "*", "+", ",", "-", ".", "/", "\:", "\;", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_","`", "{","|","}", "~"];
     // Numeric characters
     let numbers = [0,1, 2, 3, 4, 5, 6, 7, 8, 9];
     // Alphabetical characters
-    let alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    // Space is for the Uppercase conversion
-    let choices = [];
-    
-    // converts letters to uppercase 
-    let toUpper = function (x) {
-      return x.toUpperCase();
-    };
-    // creates a variable for uppercase conversion
-    let alpha2 = alpha.map(toUpper);
+    let lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
+    let uppercaseLetters = lowercaseLetters.toUpperCase(); // converts lowercase letters to uppercase
 
-    // Asks for user for the input
+    let lowerCaseLettersArray = lowercaseLetters.split(''); // converts letters in a string to an array with those letters (e.g. ['a', 'b', 'c', ...])
+
+    // console.log(lowerCaseLettersArray);
+
+    let upperCaseLettersArray = uppercaseLetters.split('');
+    // console.log(upperCaseLettersArray);
+
+     // Asks for user for the input
     enter = parseInt(prompt("How many characters would you like in your password? (or What would you like the length of your Generated Password to be?)                {Please, choose the length of your password between 8 and 128 characters!}"));
     // First if statement for user validation 
     if (!enter) {
-      alert("This needs a value");
+      alert("Please, enter a value");
     } else if (enter < 8 || enter > 128) {
       // Validates user input
       // Start user input prompts
-      enter = parseInt(prompt("You must choose between 8 and 128"));
+      enter = parseInt(prompt("You must choose a number between 8 and 128"));
 
     } else {
       // Continues once user input is validated
@@ -61,11 +61,11 @@ function writePassword() {
     }
 
     if (confirmUppercase) {
-      choices = choices.concat(alpha2);
+      choices = choices.concat(upperCaseLettersArray);
     }
 
     if (confirmLowercase) {
-      choices = choices.concat(alpha);
+      choices = choices.concat(lowerCaseLettersArray);
     }
     if (confirmNumber) {
       choices = choices.concat(numbers);
@@ -73,19 +73,15 @@ function writePassword() {
 
     // password variable is an array placeholder for user generated amount of length
     var password = [];
-
-    // Start random selection variables:
-    // Random selection for all variables: 
-    for (var i = 0; i < enter; i++) {
-      var randomIndex = Math.floor(Math.random() * choices.length)
-      //or this is other options with Math.round or ~~:
-      //var randomIndex = Math.round(Math.random() * choices.length);
-      //var randomIndex = ~~(Math.random() * choices.length);
-      var pickChoices = choices[randomIndex];
+    
+    
+    choices.forEach(function() {
+      let randomIndex = Math.floor(Math.random() * choices.length);
+      let pickChoices = choices[randomIndex];
       password.push(pickChoices);
-    }
+    })
     // This joins the password array and converts it to a string    
-    var passwordString = password.join("");
+    var passwordString = password.join("").slice(0, enter);
     // UserInput(passwordString);
     // console.log(passwordString)
 
@@ -104,9 +100,4 @@ function writePassword() {
   // alert(`Here is the generated Password:  ${ password}`);
 }
 // Add event listener to generate button and 
-generateBtn.addEventListener("click", writePassword);
-
-
-
-
-    
+generateBtn.addEventListener("click", writePassword); 

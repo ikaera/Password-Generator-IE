@@ -1,7 +1,7 @@
 'use strict';
 
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
@@ -9,27 +9,27 @@ function writePassword() {
   // Start function to generate password
   function generatePassword() {
     // User input variables: 
-    var enter;
-    var confirmNumber;
-    var confirmCharacter;
-    var confirmUppercase;
-    var confirmLowercase;
+    let enter;
+    let confirmNumber;
+    let confirmCharacter;
+    let confirmUppercase;
+    let confirmLowercase;
     // Start Password variable values: 
     // Special characters 
-    var characters = ["!", "#", "$", "%", "&", "'", "(",")", "*", "+", ",", "-", ".", "/", "\:", "\;", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_","`", "{","|","}", "~"];
+    let characters = ["!", "#", "$", "%", "&", "'", "(",")", "*", "+", ",", "-", ".", "/", "\:", "\;", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_","`", "{","|","}", "~"];
     // Numeric characters
-    var numbers = [0,1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let numbers = [0,1, 2, 3, 4, 5, 6, 7, 8, 9];
     // Alphabetical characters
-    var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    let alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     // Space is for the Uppercase conversion
-    var choices = [];
+    let choices = [];
     
     // converts letters to uppercase 
-    var toUpper = function (x) {
+    let toUpper = function (x) {
       return x.toUpperCase();
     };
     // creates a variable for uppercase conversion
-    var alpha2 = alpha.map(toUpper);
+    let alpha2 = alpha.map(toUpper);
 
     // Asks for user for the input
     enter = parseInt(prompt("How many characters would you like in your password? (or What would you like the length of your Generated Password to be?)                {Please, choose the length of your password between 8 and 128 characters!}"));
@@ -109,59 +109,4 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-    //  First if statement that uses user input prompts to determine choices
-    // Else if for 4 positive options
-    // else if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
-
-    //   choices = characters.concat(numbers, alpha, alpha2);
-    // }
-    // // Else if for 3 positive options
-    // else if (confirmCharacter && confirmNumber && confirmUppercase) {
-    //   choices = characters.concat(numbers, alpha2);
-    // }
-    // else if (confirmCharacter && confirmNumber && confirmLowercase) {
-    //   choices = characters.concat(numbers, alpha);
-    // }
-    // else if (confirmCharacter && confirmLowercase && confirmUppercase) {
-    //   choices = characters.concat(alpha, alpha2);
-    // }
-    // else if (confirmNumber && confirmLowercase && confirmUppercase) {
-    //   choices = numbers.concat(alpha, alpha2);
-    // }
-    // // Else if for 2 positive options 
-    // else if (confirmCharacter && confirmNumber) {
-    //   choices = characters.concat(numbers);
-
-    // } else if (confirmCharacter && confirmLowercase) {
-    //   choices = characters.concat(alpha);
-
-    // } else if (confirmCharacter && confirmUppercase) {
-    //   choices = characters.concat(alpha2);
-    // }
-    // else if (confirmLowercase && confirmNumber) {
-    //   choices = alpha.concat(number);
-
-    // } else if (confirmLowercase && confirmUppercase) {
-    //   choices = alpha.concat(alpha2);
-
-    // } else if (confirmNumber && confirmUppercase) {
-    //   choices = number.concat(alpha2);
-    // }
-    // // Else if for 1 positive option
-    // else if (confirmCharacter) {
-    //   choices = characters;
-    // }
-    // else if (confirmNumber) {
-    //   choices = numbers;
-    // }
-    // else if (confirmLowercase) {
-    //   choices = alpha;
-    // }
-    // // Created choices variable to fill uppercase conversion
-    // else if (confirmUppercase) {
-    //   choices = choices.concat(alpha2);
-    // };
-     // if (!passwordText.value === 0){
-  //   passwordText.value = '';
-  // }
-
+    

@@ -8,14 +8,14 @@ function writePassword() {
 
   // Start function to generate password
   function generatePassword() {
-    // User input variables: 
+    // Variables:     
+    let confirmNumb;
+    let confirmChar;
+    let confirmUpper;
+    let confirmLower;
     let enter;
-    let confirmNumber;
-    let confirmCharacter;
-    let confirmUppercase;
-    let confirmLowercase;
     let choices = [];
-    // Start Password variable values: 
+
     // Special characters 
     let characters = ["!", "#", "$", "%", "&", "'", "(",")", "*", "+", ",", "-", ".", "/", "\:", "\;", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_","`", "{","|","}", "~"];
     // Numeric characters
@@ -43,31 +43,31 @@ function writePassword() {
 
     } else {
       // Continues once user input is validated
-      confirmNumber = confirm("Will this include numbers (numeric characters)?");
-      confirmCharacter = confirm("Will this include special characters?");
-      confirmUppercase = confirm("Will this include Uppercase letters?");
-      confirmLowercase = confirm("Will this include Lowercase letters?");
+      confirmNumb = confirm("Will this include numbers (numeric characters)?");
+      confirmChar = confirm("Will this include special characters?");
+      confirmUpper = confirm("Will this include Uppercase letters?");
+      confirmLower = confirm("Will this include Lowercase letters?");
     };
 
     // Else if for 4 negative options
-    if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
+    if (!confirmChar && !confirmNumb && !confirmUpper && !confirmLower) {
       choices = alert("You must choose a criteria!");
 
     }
     //Check if confirmed characters are true
     //if true concatinate special characters array.
-    if (confirmCharacter) {
+    if (confirmChar) {
       choices = choices.concat(characters);
     }
 
-    if (confirmUppercase) {
+    if (confirmUpper) {
       choices = choices.concat(upperCaseLettersArray);
     }
 
-    if (confirmLowercase) {
+    if (confirmLower) {
       choices = choices.concat(lowerCaseLettersArray);
     }
-    if (confirmNumber) {
+    if (confirmNumb) {
       choices = choices.concat(numbers);
     }
 

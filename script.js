@@ -48,7 +48,7 @@ function writePassword() {
     // Else if for 4 negative options
     if (!confirmChar && !confirmNumb && !confirmUpper && !confirmLower) {
       alert("You must choose a criteria!");
-      return;
+      // return;
     }
     //Check if confirmed chars are true
     //if true concatinate special chars array.

@@ -12,15 +12,14 @@ function writePassword() {
     let confirmNumb;
     let confirmChar;
     let confirmUpper;
-    let confirmLower;
-    let enter;
+    let confirmLower;        
     let choices = [];
 
-    // Special characters 
-    let characters = ["!", "#", "$", "%", "&", "'", "(",")", "*", "+", ",", "-", ".", "/", "\:", "\;", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_","`", "{","|","}", "~"];
-    // Numeric characters
+    // Special chars 
+    let chars = ["!", "#", "$", "%", "&", "'", "(",")", "*", "+", ",", "-", ".", "/", "\:", "\;", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_","`", "{","|","}", "~"];
+    // Numeric chars
     let numbers = [0,1, 2, 3, 4, 5, 6, 7, 8, 9];
-    // Alphabetical characters
+    // Alphabetical chars
     let lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
     let uppercaseLetters = lowercaseLetters.toUpperCase(); // converts lowercase letters to uppercase
 
@@ -32,7 +31,7 @@ function writePassword() {
     // console.log(upperCaseLettersArray);
 
      // Asks for user for the input
-    enter = parseInt(prompt("How many characters would you like in your password? (or What would you like the length of your Generated Password to be?)                {Please, choose the length of your password between 8 and 128 characters!}"));
+    const enter = parseInt(prompt("Please, choose the length of your password between 8 and 128 characters!"));
     // First if statement for user validation 
     if (!enter) {
       alert("Please, enter a value");
@@ -43,8 +42,8 @@ function writePassword() {
 
     } else {
       // Continues once user input is validated
-      confirmNumb = confirm("Will this include numbers (numeric characters)?");
-      confirmChar = confirm("Will this include special characters?");
+      confirmNumb = confirm("Will this include numbers (numeric chars)?");
+      confirmChar = confirm("Will this include special chars?");
       confirmUpper = confirm("Will this include Uppercase letters?");
       confirmLower = confirm("Will this include Lowercase letters?");
     };
@@ -54,10 +53,10 @@ function writePassword() {
       choices = alert("You must choose a criteria!");
 
     }
-    //Check if confirmed characters are true
-    //if true concatinate special characters array.
+    //Check if confirmed chars are true
+    //if true concatinate special chars array.
     if (confirmChar) {
-      choices = choices.concat(characters);
+      choices = choices.concat(chars);
     }
 
     if (confirmUpper) {
@@ -72,8 +71,7 @@ function writePassword() {
     }
 
     // password variable is an array placeholder for user generated amount of length
-    var password = [];
-    
+    const password = [];    
     
     choices.forEach(function() {
       let randomIndex = Math.floor(Math.random() * choices.length);
@@ -81,7 +79,7 @@ function writePassword() {
       password.push(pickChoices);
     })
     // This joins the password array and converts it to a string    
-    var passwordString = password.join("").slice(0, enter);
+    let passwordString = password.join("").slice(0, enter);
     // UserInput(passwordString);
     // console.log(passwordString)
 
